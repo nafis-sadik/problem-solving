@@ -58,5 +58,16 @@
 
             Console.WriteLine(); // Move to the next line
         }
+
+        public static void Heading(string message)
+        {
+            Console.BackgroundColor = ConsoleColor.Cyan;
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            Console.Write(message); // Print without newline
+            Console.ResetColor(); // Reset colors immediately after
+
+            Console.WriteLine(); // Move to the next line
+        }
     }
 }

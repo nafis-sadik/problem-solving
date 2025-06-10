@@ -4,7 +4,8 @@
     {
         public static void Main(string[] args)
         {
-            #region TwoSum
+            Print.Heading("Two Sum");
+            #region Two Sum
             TwoSum.Solution TwoSumSolution = new TwoSum.Solution();
             if (TwoSumSolution.Test([2, 7, 11, 15], 9, [0, 1]))
                 Print.Success("Test passed!");
@@ -27,7 +28,8 @@
                 Print.Error("Test failed!");
             #endregion
 
-            #region ContainsDuplicate
+            Print.Heading("Contains Duplicate");
+            #region Contains Duplicate
             ContainsDuplicate.Solution ContainsDuplicateSolution = new ContainsDuplicate.Solution();
             if (ContainsDuplicateSolution.Test([1, 2, 3, 1], true))
                 Print.Success("Test passed!");
@@ -45,6 +47,7 @@
                 Print.Error("Test failed!");
             #endregion
 
+            Print.Heading("Move Zeroes");
             #region Move Zeroes
             MoveZeroes.Solution sol = new MoveZeroes.Solution();
             if (sol.Test([0, 1, 0, 3, 12], [1, 3, 12, 0, 0]))
@@ -68,6 +71,7 @@
                 Print.Error("Test failed!");
             #endregion
 
+            Print.Heading("Longest Common Prefix");
             #region Longest Common Prefix
             LongestCommonPrefix.Solutions longestCommonPrefixSolution = new LongestCommonPrefix.Solutions();
 
@@ -92,6 +96,7 @@
                 Print.Error("Test failed!");
             #endregion
 
+            Print.Heading("Longest Substring Without Repeating Characters");
             #region Longest Substring Without Repeating Characters
             LongestSubstringWithoutRepeatingCharacters.Solutions longestSubstringWithoutRepeatingCharactersSolution = new LongestSubstringWithoutRepeatingCharacters.Solutions();
 
@@ -121,6 +126,7 @@
                 Print.Error("Test failed!");
             #endregion
 
+            Print.Heading("Roman To Integer");
             #region Roman To Integer
             RomanToInteger.Solutions romanToIntegerSolution = new RomanToInteger.Solutions();
             if (romanToIntegerSolution.Test("III", 3))
@@ -134,6 +140,49 @@
                 Print.Error("Test failed!");
 
             if (romanToIntegerSolution.Test("MCMXCIV", 1994))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+            #endregion
+
+            Print.Heading("Length of Last Word");
+            #region Length of Last Word
+            LengthofLastWord.Solutions lengthOfLastWordSolution = new LengthofLastWord.Solutions();
+            if (lengthOfLastWordSolution.Test("Hello World", 5))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (lengthOfLastWordSolution.Test("   fly me   to   the moon  ", 4))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (lengthOfLastWordSolution.Test("luffy is still joyboy", 6))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+            #endregion
+
+            Print.Heading("Reverse Words in a String");
+            #region Reverse Words in a String
+            ReverseWordsInAString.Solutions reverseWordsInAStringSolution = new ReverseWordsInAString.Solutions();
+            if (reverseWordsInAStringSolution.Test("the sky is blue", "blue is sky the"))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (reverseWordsInAStringSolution.Test("  hello world  ", "world hello"))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (reverseWordsInAStringSolution.Test("   a good     example  ", "example good a"))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (reverseWordsInAStringSolution.Test("F R  I   E    N     D      S      ", "S D N E I R F"))
                 Print.Success("Test passed!");
             else
                 Print.Error("Test failed!");
