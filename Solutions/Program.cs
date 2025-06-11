@@ -187,6 +187,35 @@
             else
                 Print.Error("Test failed!");
             #endregion
+
+            Print.Heading("Minimum Size Subarray Sum");
+            #region Minimum Size Subarray Sum
+            MinimumSizeSubarraySum.Solutions minimumSizeSubarraySumSolution = new MinimumSizeSubarraySum.Solutions();
+            if (minimumSizeSubarraySumSolution.Test([2, 3, 1, 2, 4, 3], 7, 2))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (minimumSizeSubarraySumSolution.Test([1, 4, 4], 4, 1))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (minimumSizeSubarraySumSolution.Test([1, 1, 1, 1, 1, 1, 1, 1], 11, 0))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (minimumSizeSubarraySumSolution.Test([1, 2, 3, 4, 5], 11, 3))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (minimumSizeSubarraySumSolution.Test([1, 2, 3, 4, 5], 15, 5))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+            #endregion
         }
     }
 }
