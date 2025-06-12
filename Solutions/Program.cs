@@ -216,6 +216,30 @@
             else
                 Print.Error("Test failed!");
             #endregion
+
+            Print.Heading("Valid Parentheses");
+            #region Valid Parentheses
+            ValidParentheses.Solutions validParenthesesSolution = new ValidParentheses.Solutions();
+            if (validParenthesesSolution.Test("()", true))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (validParenthesesSolution.Test("()[]{}", true))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (validParenthesesSolution.Test("(]", false))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (validParenthesesSolution.Test("]", false))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+            #endregion
         }
     }
 }
