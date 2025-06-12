@@ -240,6 +240,48 @@
             else
                 Print.Error("Test failed!");
             #endregion
+
+            Print.Heading("Merge Two Sorted Lists");
+            #region Merge Two Sorted Lists
+            MergeTwoSortedLists.Solutions mergeTwoSortedListsSolution = new MergeTwoSortedLists.Solutions();
+            MergeTwoSortedLists.Solutions.ListNode list1 = new MergeTwoSortedLists.Solutions.ListNode(
+                1, new MergeTwoSortedLists.Solutions.ListNode(
+                    2, new MergeTwoSortedLists.Solutions.ListNode(
+                        4)));
+            MergeTwoSortedLists.Solutions.ListNode list2 = new MergeTwoSortedLists.Solutions.ListNode(
+                1, new MergeTwoSortedLists.Solutions.ListNode(
+                    3, new MergeTwoSortedLists.Solutions.ListNode(
+                        4)));
+            MergeTwoSortedLists.Solutions.ListNode expected = new MergeTwoSortedLists.Solutions.ListNode(
+                1, new MergeTwoSortedLists.Solutions.ListNode(
+                    1, new MergeTwoSortedLists.Solutions.ListNode(
+                        2, new MergeTwoSortedLists.Solutions.ListNode(
+                            3, new MergeTwoSortedLists.Solutions.ListNode(
+                                4, new MergeTwoSortedLists.Solutions.ListNode(
+                                    4))))));
+            if (mergeTwoSortedListsSolution.Test(list1, list2, expected))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (mergeTwoSortedListsSolution.Test(null, null, null))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            list1 = new MergeTwoSortedLists.Solutions.ListNode(
+                -9, new MergeTwoSortedLists.Solutions.ListNode(3));
+            list2 = new MergeTwoSortedLists.Solutions.ListNode(
+                5, new MergeTwoSortedLists.Solutions.ListNode(7));
+            expected = new MergeTwoSortedLists.Solutions.ListNode(
+                -9, new MergeTwoSortedLists.Solutions.ListNode(
+                    3, new MergeTwoSortedLists.Solutions.ListNode(
+                        5, new MergeTwoSortedLists.Solutions.ListNode(7))));
+            if (mergeTwoSortedListsSolution.Test(list1, list2, expected))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+            #endregion
         }
     }
 }
