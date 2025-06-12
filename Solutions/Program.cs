@@ -282,6 +282,20 @@
             else
                 Print.Error("Test failed!");
             #endregion
+
+            Print.Heading("Maximum Difference Between Adjacent Elements in a Circular Array");
+            #region Maximum Difference Between Adjacent Elements in a Circular Array
+            MaximumDifferenceBetweenAdjacentElementsInACircularArray.Solutions maxDiffSolution = new MaximumDifferenceBetweenAdjacentElementsInACircularArray.Solutions();
+            if (maxDiffSolution.IsValid([1, 2, 4], 3))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (maxDiffSolution.IsValid([-5, -10, -5], 5))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+            #endregion
         }
     }
 }
