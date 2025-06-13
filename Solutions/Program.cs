@@ -1,4 +1,6 @@
-﻿namespace Solutions
+﻿using System.Collections.Generic;
+
+namespace Solutions
 {
     public class Program
     {
@@ -296,6 +298,28 @@
             else
                 Print.Error("Test failed!");
             #endregion
+
+            Print.Heading("Find the Index of the First Occurrence in a String");
+            FindTheIndexOfTheFirstOccurrenceInAString.Solutions solution = new FindTheIndexOfTheFirstOccurrenceInAString.Solutions();
+            if(solution.Test("sadbutsad", "sad", 0))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (solution.Test("leetcode", "leeto", -1))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (solution.Test("a", "a", 0))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (solution.Test("mississippi", "issip", 4))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
         }
     }
 }
