@@ -341,6 +341,20 @@ namespace Solutions
             else
                 Print.Error("Test failed!");
             #endregion
+
+            Print.Heading("Container With Most Water");
+            #region Container With Most Water
+            ContainerWithMostWater.Solutions containerWithMostWater = new ContainerWithMostWater.Solutions();
+            if (containerWithMostWater.Test([1, 8, 6, 2, 5, 4, 8, 3, 7], 49))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (containerWithMostWater.Test([1, 1], 1))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+            #endregion
         }
     }
 }
