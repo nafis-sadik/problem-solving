@@ -300,6 +300,7 @@ namespace Solutions
             #endregion
 
             Print.Heading("Find the Index of the First Occurrence in a String");
+            #region Find the Index of the First Occurrence in a String
             FindTheIndexOfTheFirstOccurrenceInAString.Solutions solution = new FindTheIndexOfTheFirstOccurrenceInAString.Solutions();
             if(solution.Test("sadbutsad", "sad", 0))
                 Print.Success("Test passed!");
@@ -320,6 +321,26 @@ namespace Solutions
                 Print.Success("Test passed!");
             else
                 Print.Error("Test failed!");
+            #endregion
+
+            Print.Heading("TwoSum - II - Input Array Is Sorted");
+            #region TwoSum - II - Input Array Is Sorted
+            TwoSum_II.Solution twoSumIISolution = new TwoSum_II.Solution();
+            if (twoSumIISolution.Test([2, 7, 11, 15], 9, [1, 2]))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (twoSumIISolution.Test([2, 3, 4], 6, [1, 3]))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if(twoSumIISolution.Test([-1, 0], -1, [1, 2]))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+            #endregion
         }
     }
 }

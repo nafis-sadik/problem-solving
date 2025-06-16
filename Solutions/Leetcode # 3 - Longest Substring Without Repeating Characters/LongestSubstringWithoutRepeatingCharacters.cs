@@ -1,5 +1,5 @@
 ﻿// Leetcode # 3 - Longest Substring Without Repeating Characters
-// https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/1657939491
+// https://leetcode.com/problems/longest-substring-without-repeating-characters/submissions/1666007287
 namespace LongestSubstringWithoutRepeatingCharacters
 {
     public class Solutions
@@ -7,25 +7,28 @@ namespace LongestSubstringWithoutRepeatingCharacters
         Dictionary<char, int> subStrMap = new Dictionary<char, int>();
         public int LengthOfLongestSubstring(string s)
         {
-            int maxLength = 0;
-            subStrMap.Clear();
-            for (int right = 0, left = 0; right < s.Length; right++)
+            if (s.Length < 2) return s.Length;
+
+            this.subStrMap.Clear();
+            int subStrLen = 0, left = 0, right = 0;
+            for (; right < s.Length; right++)
             {
-                char currentChar = s[right];
-                if (!subStrMap.ContainsKey(currentChar))
-                    subStrMap.Add(currentChar, right);
+                if (!subStrMap.ContainsKey(s[right]))
+                {
+                    subStrMap.Add(s[right], right);
+                }
                 else
                 {
-                    if (subStrMap[currentChar] >= left)
-                        left = subStrMap[currentChar] + 1;
+                    if (subStrMap[s[right]] >= left)
+                        left = subStrMap[s[right]] + 1;
 
-                    subStrMap[currentChar] = right;
+                    subStrMap[s[right]] = right;
                 }
 
-                maxLength = Math.Max(maxLength, right - left + 1);
+                subStrLen = Math.Max(subStrLen, right - left + 1);
             }
 
-            return maxLength;
+            return subStrLen;
         }
 
         public bool Test(string s, int expected)
