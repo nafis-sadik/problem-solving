@@ -355,6 +355,35 @@ namespace Solutions
             else
                 Print.Error("Test failed!");
             #endregion
+
+            Print.Heading("Reverse Integer");
+            #region Reverse Integer
+            ReverseInteger.Solution reverseInteger = new ReverseInteger.Solution();
+            if (reverseInteger.Test(123, 321))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (reverseInteger.Test(-123, -321))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (reverseInteger.Test(120, 21))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (reverseInteger.Test(1534236469, 0))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+
+            if (reverseInteger.Test(-2147483648, 0))
+                Print.Success("Test passed!");
+            else
+                Print.Error("Test failed!");
+            #endregion
         }
     }
 }
